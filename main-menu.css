@@ -1,21 +1,5 @@
 .button {
   display: inline-block;
-  width: 200px;
-  height: 200px;
-  border: 5px solid #000000;
-  border-radius: 50%;
-  font-size: 48px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 200px;
-  position: absolute;
-  background-color: royalblue;
-  color: white;
-  transition: background-color 0.5s;
-}
-
-.button {
-  display: inline-block;
   width: 150px;
   height: 150px;
   border: 5px solid #000000;
@@ -35,7 +19,7 @@
 }
 
 .button:hover {
-  background-color: darkblue;
+  background-color: purple;
 }
 
 .center {
