@@ -9,8 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="button" id="joke-button" style="top: 25%; left: 12%;">Here A Joke!</div>
-    <div class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
+    <div onclick="redirectToJoke()" class="button" id="joke-button" style="top: 25%; left: 12%;">Here A Joke!</div>
+    <div onclick="redirectToBreathe()"class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
 
     <h1 id="title">Choose Your Action!</h1>
     <p id="subtitle">Hover over an activity with your hand to select</p>
@@ -19,7 +19,24 @@
     	<img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
 
-    <div class="button" style="top: 25%; left: 88%;">Check in :)</div>
-    <div class="button" style="top: 75%; left: 88%;">Get Inspired!</div>
+    <div onclick="redirectToCheckIn()" class="button" style="top: 25%; left: 88%;">Check in :)</div>
+    <div onclick="redirectToInspiration()" class="button" style="top: 75%; left: 88%;">Get Inspired!</div>
+
+    <script>
+      function redirectToJoke() {
+        window.location.href = "joke.html";
+      }
+      function redirectToBreathe() {
+        window.location.href = "breathe.html";
+      }
+      function redirectToCheckIn() {
+        window.location.href = "checkin.html";
+      }
+      function redirectToInspiration() {
+        window.location.href = "inspiration.html";
+      }
+    </script>
+
+
   </body>
 </html>
