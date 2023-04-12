@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600px;
+    font-family: open
+}
+#cat-gif {
+    margin: 20px;
+    height:250px;
+}
+#startup-text {
+    font-family: 'Open Sans', sans-serif;
+}
