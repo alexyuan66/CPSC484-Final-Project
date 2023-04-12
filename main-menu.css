@@ -4,10 +4,10 @@
   height: 150px;
   border: 5px solid #000000;
   border-radius: 10%;
-  font-size: 32px;
-  font-weight: bold;
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
   line-height: 150px;
+  word-wrap: normal;  
   position: absolute;
   top: 50%;
   left: 50%;
@@ -16,6 +16,7 @@
   background-color: pink;
   color: white;
   transition: background-color 0.5s;
+  
 }
 
 .button:hover {
@@ -27,4 +28,19 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+#title {
+  font-family: 'Open Sans', sans-serif;
+  top: 10%; 
+  left: 35%;
+  position: absolute;
+}
+
+#subtitle {
+  font-family: 'Open Sans', sans-serif;
+  top: 20%; 
+  left: 34%;
+  position: absolute; 
+  color: grey;
 }
