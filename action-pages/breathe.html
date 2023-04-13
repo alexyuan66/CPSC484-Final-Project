@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>breathe</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../breathe.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       /* Add styles for the title */
@@ -46,45 +48,12 @@
         display: inline-block;
         vertical-align: top;
       }
-      
-      /* Add background color for body */
-      body {
-        background-color: white;
-      }
-      
-      /* Add styles for the buttons */
-      .button-container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em 0;
-      }
-      
-      .button {
-        display: inline-block;
-        background-color: #b3b3b3;
-        color: black;
-        font-size: 1.5em;
-        font-weight: bold;
-        text-align: center;
-        padding: 1em 2em;
-        margin: 0 1em;
-        border-radius: 0.5em;
-        border: 2px solid black;
-        cursor: pointer;
-      }
-      
-      .button:hover {
-        background-color: #999999;
-      }
     </style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Black" rel="stylesheet">
   </head>
+
   <body>
+
     <div class="title">Inhale</div>
     <div class="container container-left">
       <img class="cat-image" src="../media/cat.gif" alt="A cute cat">
@@ -92,10 +61,10 @@
     <div class="container container-right">
       <div class="circle" alt="Pink circle"></div>
     </div>
-    <div class="button-container">
-      <button class="button" onclick="goToMainMenu()">Back</button>
-      <button class="button" onclick="completeBreathing()">Done (+15%)</button>
+    <div class="other-button-container">
+      <button class="other-button" onclick="goToMainMenu()">Back</button>
+      <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
     </div>
-    <script src="../breathe.js"></script>
+
   </body>
 </html>
