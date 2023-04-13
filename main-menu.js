@@ -25,7 +25,7 @@ $(document).ready(function () {
 // Links
 
 function redirectToJoke() {
-  window.location.href = "action-pages/joke.html";
+  x = "action-pages/joke.html";
 }
 function redirectToBreathe() {
   window.location.href = "action-pages/breathe.html";
