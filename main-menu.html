@@ -13,15 +13,15 @@
 
     <div class="main-text">
       <h1>Choose Your Action!</h1>
-      <p>Hover and hold your hand over any button for 3 seconds to select</p>
+      <p>Hover and hold your hand over any buttong for 3 seconds to select</p>
     </div>
 
-    <div onclick="redirectToJoke()" class="action-button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
-    <div onclick="redirectToBreathe()"class="action-button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
-    <div onclick="redirectToCheckIn()" class="action-button" style="top: 25%; left: 88%;">Check in :)</div>
-    <div onclick="redirectToInspiration()" class="action-button" style="top: 75%; left: 88%;">Get Inspired!</div>
+    <div onclick="redirectToJoke()" class="button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
+    <div onclick="redirectToBreathe()"class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
+    <div onclick="redirectToCheckIn()" class="button" style="top: 25%; left: 88%;">Check in :)</div>
+    <div onclick="redirectToInspiration()" class="button" style="top: 75%; left: 88%;">Get Inspired!</div>
 
-    <div class="cat-container">
+    <div class="gif-container">
     	<img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
 
@@ -30,9 +30,10 @@
     </div>
 
     <div class="other-button-container">
-      <button class="other-button" onclick="decreaseHealth">Damage (-10%)</button>
-      <button class="other-button" onclick="increaseHealth">Heal (+10%)</button>
+      <button class="other-button" id="damage-button">Damage (-10%)</button>
+      <button class="other-button" id="heal-button">Heal (+10%)</button>
     </div>
-
+    
+    <script src="main-menu.js"></script>
   </body>
 </html>
