@@ -1,12 +1,22 @@
+/*body {
+  background-color: #222222;
+}
+*/
 .button {
   display: inline-block;
   width: 150px;
   height: 150px;
-  border: 5px solid #000000;
+  border: 4px solid #7E6065;
   border-radius: 10%;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  line-height: 150px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
   word-wrap: normal;  
   position: absolute;
   top: 50%;
@@ -14,9 +24,8 @@
   margin-top: -75px;
   margin-left: -75px;
   background-color: pink;
-  color: white;
+  color: black;
   transition: background-color 0.5s;
-  
 }
 
 .button:hover {
@@ -32,9 +41,12 @@
 
 #title {
   font-family: 'Open Sans', sans-serif;
-  top: 10%; 
-  left: 35%;
+  font-weight: bold;
+  font-size: 64px;
+  text-align: center;
   position: absolute;
+  top: 10%;
+  left: 35%;
 }
 
 #subtitle {
@@ -44,3 +56,50 @@
   position: absolute; 
   color: grey;
 }
+
+.title-centered {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.gif-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.progress-border {
+  width: 500px;
+  height: 25px;
+  border: solid #000000 3px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-bar {
+  display: inline-block;
+  height: 25px;
+  transition: width 0.5s, background-color 0.5s;
+  width: 500px;
+  text-align: center;
+  font-size: 55px;
+  font-family: courier;
+}
+
+#health-bar {
+  background-color: #00ff00;
+}
+
+
+
