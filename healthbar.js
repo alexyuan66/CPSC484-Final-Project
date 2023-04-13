@@ -10,6 +10,7 @@ function tohex(r, g, b) {
   const healthBar = document.getElementById("health-bar");
   
   // Check if the user has a saved health value in local storage
+  localStorage.removeItem("health");
   let currentHealth = localStorage.getItem("health");
   if (currentHealth) {
     // If a saved value exists, set the health bar to that value
