@@ -34,3 +34,11 @@ function exhale() {
 }
 
 breathe(); // Start the breathing exercise
+
+function goToMainMenu() {
+    window.location.href = "../main-menu.html";
+}
+
+function completeBreathing() {
+    window.location.href = "../main-menu.html";
+}

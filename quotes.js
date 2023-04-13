@@ -54,6 +54,6 @@ function generateQuote() {
 }
 
 
-function goBack() {
-    window.location.href = "main-menu.html";
+function goToMainMenu() {
+    window.location.href = "../main-menu.html";
 }

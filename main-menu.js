@@ -25,16 +25,16 @@ $(document).ready(function () {
 // Links
 
 function redirectToJoke() {
-  window.location.href = "joke.html";
+  window.location.href = "action-pages/joke.html";
 }
 function redirectToBreathe() {
-  window.location.href = "breathe.html";
+  window.location.href = "action-pages/breathe.html";
 }
 function redirectToCheckIn() {
-  window.location.href = "checkin.html";
+  window.location.href = "action-pages/check-in.html";
 }
 function redirectToInspiration() {
-  window.location.href = "inspiration.html";
+  window.location.href = "action-pages/quotes.html";
 }
 
 //
