@@ -3,57 +3,12 @@
   <head>
     <title>breathe</title>
     <link rel="stylesheet" type="text/css" href="../style.css">
-    <script src="../breathe.js"></script>
+    <link rel="stylesheet" type="text/css" href="breathe.css">
+    <script src="breathe.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      /* Add styles for the title */
-      .title {
-        font-family: "Open Sans Black", sans-serif;
-        font-size: 3em;
-        text-align: center;
-        margin-top: 2rem;
-      }
-      
-      /* Add styles for the pink circle */
-      .circle {
-        display: inline-block;
-        width: 100px;
-        height: 100px;
-        background-color: pink;
-        border-radius: 50%;
-      }
-      
-      /* Add styles for the container */
-      .container {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 50%;
-      }
-      
-      /* Add styles for the left container */
-      .container-left {
-        left: 0;
-        text-align: left;
-      }
-      
-      /* Add styles for the right container */
-      .container-right {
-        right: 0;
-        text-align: center;
-      }
-      
-      /* Add styles for the cat image */
-      .cat-image {
-        display: inline-block;
-        vertical-align: top;
-      }
-    </style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Black" rel="stylesheet">
   </head>
-
   <body>
-
     <div class="title">Inhale</div>
     <div class="container container-left">
       <img class="cat-image" src="../media/cat.gif" alt="A cute cat">
@@ -65,6 +20,5 @@
       <button class="other-button" onclick="goToMainMenu()">Back</button>
       <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
     </div>
-
   </body>
 </html>
