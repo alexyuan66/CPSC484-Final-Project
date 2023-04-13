@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Check In</title>
-    <link rel="stylesheet" type="text/css" href="checkin.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../check-in.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +16,23 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div onclick="redirectToCongrats()" class="button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
-    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 25%; left: 88%;">Check in :)</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 75%; left: 88%;">Get Inspired!</div>
+    <div onclick="redirectToCongrats()" class="button" id="joke-button" style="top: 15%; left: 12%;">Drink Water!</div>
+    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 50%; left: 12%;">Smile</div>
+    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 85%; left: 12%;">Exercise</div>
 
-    <div class="gif-container">
-    	<img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
+    <div onclick="redirectToCongrats()" class="button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
+    <div onclick="redirectToCongrats()" class="button" style="top: 50%; left: 88%;">Talk to a Friend</div>
+    <div onclick="redirectToCongrats()" class="button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
+
+
+    <div class="cat-container">
+    	<img src="../media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
+
 
     <script>
         function redirectToCongrats() {
-            window.location.href = "congratulations.html"
+            window.location.href = "../congratulations.html"
         }
     </script>
 
