@@ -13,17 +13,35 @@
 </head>
 <body>
     <div class="container">
-      <h1 id="startup-text">Wave Your Hand To Begin!👋</h1>
+      <button class="redirect-button expand-button">Place Your Hand Here!</button>
       <img src="media/cat.gif" alt="Animated GIF" id="cat-gif">
     </div>
     <div class="cursor"></div>
+    
     <script>
+
         function trackCursor(e) {
             const cursor = document.querySelector('.cursor');
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
         }
         document.addEventListener('mousemove', trackCursor);
+
+        document.querySelector('.redirect-button').addEventListener('mouseenter', function() {
+          hoverTimeout = setTimeout(function() {
+            // Add your code to execute after 3 seconds of hovering here
+            window.location.href = 'main-menu.html';
+          }, 3000);
+        });
+
+        document.querySelector('.redirect-button').addEventListener('mouseleave', function() {
+          clearTimeout(hoverTimeout);
+        });
+
+
+
+
     </script>
+
 </body>
 </html>
