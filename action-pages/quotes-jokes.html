@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Jokes</title>
-	    <link rel="stylesheet" type="text/css" href="../style.css">
+	    <link rel="stylesheet" type="text/css" href="../style/style.css">
 	    <script type="text/javascript" src="quotes.js"></script>
 	</head>
 
@@ -21,6 +21,16 @@
 			<button class="other-button" onclick="goToMainMenu()">Back</button>
 			<button class="other-button" onclick="generateJoke()">New Joke (+2%)</button>
 		</div>
+
+		<div class="cursor"></div>
+		<script>
+			function trackCursor(e) {
+				const cursor = document.querySelector('.cursor');
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			}
+			document.addEventListener('mousemove', trackCursor);
+		</script>
 
 	</body>
 </html>

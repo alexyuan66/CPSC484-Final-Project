@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Check In</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" type="text/css" href="../check-in.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/check-in.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +29,15 @@
     	<img src="../media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
 
-
+    <div class="cursor"></div>
     <script>
+        function trackCursor(e) {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
+        document.addEventListener('mousemove', trackCursor);
+
         function redirectToCongrats() {
             window.location.href = "../congratulations.html"
         }

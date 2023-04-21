@@ -144,3 +144,15 @@ body {
     background-color: darkturquoise;
 }
 
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+}

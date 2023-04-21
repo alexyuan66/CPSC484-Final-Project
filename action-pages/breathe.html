@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>breathe</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
-    <link rel="stylesheet" type="text/css" href="breathe.css">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="stylesheet" type="text/css" href="../style/breathe.css">
     <script src="breathe.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Black" rel="stylesheet">
@@ -20,5 +20,15 @@
       <button class="other-button" onclick="goToMainMenu()">Back</button>
       <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
     </div>
+
+    <div class="cursor"></div>
+    <script>
+        function trackCursor(e) {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
+        document.addEventListener('mousemove', trackCursor);
+    </script>
   </body>
 </html>

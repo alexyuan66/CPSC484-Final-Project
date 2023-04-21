@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>Main Menu</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="main-menu.css">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/main-menu.css">
     <script src="main-menu.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +34,16 @@
       <button class="other-button" id="damage-button">Damage (-10%)</button>
       <button class="other-button" id="heal-button">Heal (+10%)</button>
     </div>
+
+    <div class="cursor"></div>
+    <script>
+        function trackCursor(e) {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
+        document.addEventListener('mousemove', trackCursor);
+    </script>
     
     <script src="healthbar.js"></script>
   </body>
