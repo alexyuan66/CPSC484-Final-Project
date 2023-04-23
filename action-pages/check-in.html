@@ -16,20 +16,19 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div class="button" id="water-button" style="top: 15%; left: 12%;">Drink Water!</div>
-    <div class="button" id="smile-button" style="top: 50%; left: 12%;">Smile</div>
-    <div class="button" id="exercise-button" style="top: 85%; left: 12%;">Exercise</div>
+    <div class="button" id="water-button" id="heal-button" style="top: 15%; left: 12%;">Drink Water!</div>
+    <div class="button" id="smile-button" id="heal-button" style="top: 50%; left: 12%;">Smile</div>
+    <div class="button" id="exercise-button" id="heal-button" style="top: 85%; left: 12%;">Exercise</div>
 
-    <div class="button" id="self-love-button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
-    <div class="button" id="talk-friend-button" style="top: 50%; left: 88%;">Talk to a Friend</div>
-    <div class="button" id="talk-stranger-button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
+    <div class="button" id="self-love-button" id="heal-button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
+    <div class="button" id="talk-friend-button" id="heal-button" style="top: 50%; left: 88%;">Talk to a Friend</div>
+    <div class="button" id="talk-stranger-button" id="heal-button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
 
     <div class="cat-container">
     	<img src="../media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
 
     <div class="cursor"></div>
-    <script src="../updateHealthbar.js"></script>
     <script>
         function trackCursor(e) {
             const cursor = document.querySelector('.cursor');
@@ -39,7 +38,17 @@
         document.addEventListener('mousemove', trackCursor);
 
         function redirectToCongrats() {
-            window.location.href = "../congratulations.html";
+          // Check if the user has a saved health value in local storage
+          let currentHealth = localStorage.getItem("health");
+          // Increase the health value by 10%
+          currentHealth = parseInt(currentHealth);
+          currentHealth += 10;
+          if (currentHealth > 100) {
+            currentHealth = 0;
+          }
+          // Save the new health value to local storage
+          localStorage.setItem("health", currentHealth);
+          window.location.href = "../congratulations.html";
         }
 
         // function to simulate a button click after 3 seconds of hovering

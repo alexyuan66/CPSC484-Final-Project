@@ -55,6 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   function completeBreathing() {
+    // Check if the user has a saved health value in local storage
+    let currentHealth = localStorage.getItem("health");
+    // Increase the health value by 10%
+    currentHealth = parseInt(currentHealth);
+    currentHealth += 10;
+    if (currentHealth > 100) {
+      currentHealth = 0;
+    }
+    // Save the new health value to local storage
+    localStorage.setItem("health", currentHealth);
     window.location.href = "../congratulations.html";
   }
   
