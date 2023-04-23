@@ -17,10 +17,10 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div onclick="redirectToJoke()" class="button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
-    <div onclick="redirectToBreathe()"class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
-    <div onclick="redirectToCheckIn()" class="button" style="top: 25%; left: 88%;">Check in :)</div>
-    <div onclick="redirectToInspiration()" class="button" style="top: 75%; left: 88%;">Get Inspired!</div>
+    <div class="button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
+    <div class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
+    <div class="button" id="check-in-button" style="top: 25%; left: 88%;">Check in :)</div>
+    <div class="button" id="inspiration-button" style="top: 75%; left: 88%;">Get Inspired!</div>
 
     <div class="gif-container">
     	<img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
@@ -43,6 +43,33 @@
             cursor.style.top = e.clientY + 'px';
         }
         document.addEventListener('mousemove', trackCursor);
+
+        $('.button').on('mouseenter', function() {
+          var timeout = setTimeout(function() {
+            $(this).click();
+          }.bind(this), 3000);
+          $(this).data('timeout', timeout);
+        });
+
+        $('.button').on('mouseleave', function() {
+          clearTimeout($(this).data('timeout'));
+        });
+
+        $('#joke-button').on('click', function() {
+          redirectToJoke();
+        });
+
+        $('#breathe-button').on('click', function() {
+          redirectToBreathe();
+        });
+
+        $('#check-in-button').on('click', function() {
+          redirectToCheckIn();
+        });
+
+        $('#inspiration-button').on('click', function() {
+          redirectToInspiration();
+        });
     </script>
     
     <script src="healthbar.js"></script>

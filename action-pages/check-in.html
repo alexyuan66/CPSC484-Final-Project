@@ -16,13 +16,13 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div onclick="redirectToCongrats()" class="button" id="joke-button" style="top: 15%; left: 12%;">Drink Water!</div>
-    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 50%; left: 12%;">Smile</div>
-    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 85%; left: 12%;">Exercise</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 15%; left: 12%;">Drink Water!</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 50%; left: 12%;">Smile</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 85%; left: 12%;">Exercise</div>
 
-    <div onclick="redirectToCongrats()" class="button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 50%; left: 88%;">Talk to a Friend</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 50%; left: 88%;">Talk to a Friend</div>
+    <div class="button hover-click" data-href="../congratulations.html" style="top: 85%; left: 88%;">Talk to a Stranger</div>
 
 
     <div class="cat-container">
@@ -31,17 +31,25 @@
 
     <div class="cursor"></div>
     <script>
-        function trackCursor(e) {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        }
-        document.addEventListener('mousemove', trackCursor);
+      function trackCursor(e) {
+          const cursor = document.querySelector('.cursor');
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+      }
+      document.addEventListener('mousemove', trackCursor);
 
-        function redirectToCongrats() {
-            window.location.href = "../congratulations.html"
-        }
+      const buttons = document.querySelectorAll('.hover-click');
+      let timer;
+      buttons.forEach(button => {
+          button.addEventListener('mouseover', function() {
+              timer = setTimeout(() => {
+                  window.location.href = this.getAttribute('data-href');
+              }, 3000);
+          });
+          button.addEventListener('mouseout', function() {
+              clearTimeout(timer);
+          });
+      });
     </script>
-
   </body>
 </html>

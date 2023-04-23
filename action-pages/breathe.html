@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <link rel="stylesheet" type="text/css" href="../style/breathe.css">
     <script src="breathe.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -25,12 +26,23 @@
     </div>
 
     <div class="other-button-container">
-      <button class="other-button" onclick="goToMainMenu()">Back</button>
-      <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
+      <button class="other-button" onmouseover="startHoverTimer(this)" onmouseout="clearHoverTimer(this)" onclick="goToMainMenu()">Back</button>
+      <button class="other-button" onmouseover="startHoverTimer(this)" onmouseout="clearHoverTimer(this)" onclick="completeBreathing()">Done (+15%)</button>
     </div>
 
     <div class="cursor"></div>
 
     <script src="breathe.js"></script>
+    <script>
+      let hoverTimeout;
+      function startHoverTimer(button) {
+        hoverTimeout = setTimeout(function() {
+          button.click();
+        }, 3000);
+      }
+      function clearHoverTimer(button) {
+        clearTimeout(hoverTimeout);
+      }
+    </script>
   </body>
 </html>
