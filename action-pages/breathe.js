@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const breathCount = document.querySelector('#breath-counter');
     let size = 100;
     let breaths = 0;
+    const breathsGoal = 10;
   
     function breathe() {
       title.textContent = "Inhale";
@@ -30,7 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
           clearInterval(exhaleInterval);
           breaths++;
           breathCount.textContent = breaths;
-          setTimeout(breathe, 2000);
+          if (breaths === breathsGoal) {
+            completeBreathing();
+          } else {
+            setTimeout(breathe, 2000);
+          }
         }
       }, 10);
     }
@@ -44,4 +49,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mousemove', trackCursor);
     breathe();
   });
+  
+  function goToMainMenu() {
+    window.location.href = "../main-menu.html";
+  }
+  
+  function completeBreathing() {
+    window.location.href = "../congratulations.html";
+  }
   

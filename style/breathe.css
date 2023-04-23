@@ -1,47 +1,60 @@
+
 /* Add styles for the title */
 .title {
-    font-size: 3em;
-    text-align: center;
-    margin-top: 2rem;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0;
 }
+
+/* Add styles for the instruction */
+.instruction {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 600;
+}  
 
 /* Add styles for the breath counter */
 .breath-counter {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 2em;
-  }
-  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+}
+
 /* Add styles for the pink circle */
 .circle {
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: pink;
-    border-radius: 50%;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 50%;
 }
+
 /* Add styles for the container */
 .container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
 }
+
 /* Add styles for the left container */
 .container-left {
-    left: 0;
-    text-align: left;
+  left: 0;
+  text-align: left;
 }
+
 /* Add styles for the right container */
 .container-right {
-    right: 0;
-    text-align: center;
+  right: 0;
+  text-align: center;
 }
+
 /* Add styles for the cat image */
 .cat-image {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
 }
