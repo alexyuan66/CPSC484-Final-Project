@@ -4,10 +4,14 @@
 		<title>Inspirational Quotes</title>
 		<link rel="stylesheet" type="text/css" href="../style/style.css">
 		<script type="text/javascript" src="quotes.js"></script>
+		<script>
+			window.addEventListener('DOMContentLoaded', function() {
+				generateQuote();
+			});
+		</script>
 	</head>
 
 	<body>
-
 		<div class="container">
 			<div class="cat-container-quote">
 				<img src="../media/cat.gif" alt="cat image" width="300" height="300">
@@ -19,7 +23,6 @@
 
 		<div class="other-button-container">
 			<button class="other-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToMainMenu()">Back</button>
-			<!-- <button class="other-button" onclick="generateQuote()">New Quote (+2%)</button> -->
 			<button class="other-button" id="heal-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToComplete()">Done (+10%)</button>
 		</div>
 
