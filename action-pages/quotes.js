@@ -33,21 +33,17 @@ function generateJoke() {
 
 function generateQuote() {
     const inspirational_quotes = [
-        "'Believe you can and you're halfway there.' -Theodore Roosevelt",
-        "'The only way to do great work is to love what you do.' -Steve Jobs",
-        "'Don't watch the clock; do what it does. Keep going.' -Sam Levenson",
         "'Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.' -Christian D. Larson",
-        "'Success is not final, failure is not fatal: It is the courage to continue that counts.' -Winston Churchill",
         "'The future belongs to those who believe in the beauty of their dreams.' -Eleanor Roosevelt",
         "'It does not matter how slowly you go as long as you do not stop.' -Confucius",
         "'Happiness is not something ready made. It comes from your own actions.' -Dalai Lama",
         "'Strive not to be a success, but rather to be of value.' -Albert Einstein",
         "'Believe in yourself, take on your challenges, dig deep within yourself to conquer fears. Never let anyone bring you down. You got this.' -Chantal Sutherland",
-        "'You can never cross the ocean until you have the courage to lose sight of the shore.' -Christopher Columbus",
         "'The only person you are destined to become is the person you decide to be.' -Ralph Waldo Emerson",
         "'We may encounter many defeats but we must not be defeated.' -Maya Angelou",
         "'Your time is limited, don't waste it living someone else's life.' -Steve Jobs",
         "'If you want to lift yourself up, lift up someone else.' -Booker T. Washington",
+        "The future belongs to those who believe in the beauty of their dreams. - Marie Curie, chemist and physicist",
     ];
     const randomQuote = inspirational_quotes[Math.floor(Math.random() * inspirational_quotes.length)];
     document.getElementById("quote").innerHTML = randomQuote;
