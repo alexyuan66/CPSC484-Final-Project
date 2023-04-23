@@ -53,4 +53,3 @@
     document.addEventListener('mousemove', trackCursor);
     breathe();
   })();
-  t 
