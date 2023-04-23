@@ -37,4 +37,5 @@ if (currentHealth) {
   currentHealth = 0;
   totalHealth.textContent = currentHealth +"/100";
   speech.textContent = "Only " +(100-currentHealth) +" to Go!";
+  localStorage.setItem("health", 0);
 }
