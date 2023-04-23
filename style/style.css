@@ -140,10 +140,12 @@ html, body {
     border-radius: 0.5em;
     border: 2px solid black;
     cursor: pointer;
+    transition: background-color 4s, transform 4s;
 }
 
 .other-button:hover {
-    background-color: darkturquoise;
+    background-color: rgb(25, 184, 168);
+    transform: scale(1.5);
 }
 
 .cursor {
