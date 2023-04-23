@@ -30,6 +30,7 @@ if (currentHealth) {
     healthBar.style.backgroundColor = "#00ff00";
     healthBar.style.width = `${currentHealth}%`;
     totalHealth.textContent = currentHealth +"/100";
+    localStorage.setItem("health", currentHealth);
   }
 } else {
   // Otherwise, start the health bar at 100%
