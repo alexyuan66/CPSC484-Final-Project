@@ -16,14 +16,13 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div onclick="redirectToCongrats()" class="button" id="joke-button" style="top: 15%; left: 12%;">Drink Water!</div>
-    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 50%; left: 12%;">Smile</div>
-    <div onclick="redirectToCongrats()"class="button" id="breathe-button" style="top: 85%; left: 12%;">Exercise</div>
+    <div class="button" id="water-button" style="top: 15%; left: 12%;">Drink Water!</div>
+    <div class="button" id="smile-button" style="top: 50%; left: 12%;">Smile</div>
+    <div class="button" id="exercise-button" style="top: 85%; left: 12%;">Exercise</div>
 
-    <div onclick="redirectToCongrats()" class="button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 50%; left: 88%;">Talk to a Friend</div>
-    <div onclick="redirectToCongrats()" class="button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
-
+    <div class="button" id="self-love-button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
+    <div class="button" id="talk-friend-button" style="top: 50%; left: 88%;">Talk to a Friend</div>
+    <div class="button" id="talk-stranger-button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
 
     <div class="cat-container">
     	<img src="../media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
@@ -31,25 +30,43 @@
 
     <div class="cursor"></div>
     <script>
-      function trackCursor(e) {
-          const cursor = document.querySelector('.cursor');
-          cursor.style.left = e.clientX + 'px';
-          cursor.style.top = e.clientY + 'px';
-      }
-      document.addEventListener('mousemove', trackCursor);
+        function trackCursor(e) {
+            const cursor = document.querySelector('.cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        }
+        document.addEventListener('mousemove', trackCursor);
 
-      const buttons = document.querySelectorAll('.hover-click');
-      let timer;
-      buttons.forEach(button => {
-          button.addEventListener('mouseover', function() {
-              timer = setTimeout(() => {
-                  window.location.href = this.getAttribute('data-href');
-              }, 3000);
-          });
-          button.addEventListener('mouseout', function() {
-              clearTimeout(timer);
-          });
-      });
+        function redirectToCongrats() {
+            window.location.href = "../congratulations.html";
+        }
+
+        // function to simulate a button click after 3 seconds of hovering
+        function hoverToClick(buttonId) {
+            const button = document.getElementById(buttonId);
+            let hoverTimer;
+
+            // start timer when the user hovers over the button
+            button.addEventListener('mouseover', function() {
+                hoverTimer = setTimeout(function() {
+                    redirectToCongrats();
+                }, 3000);
+            });
+
+            // reset the timer if the user stops hovering over the button
+            button.addEventListener('mouseout', function() {
+                clearTimeout(hoverTimer);
+            });
+        }
+
+        // add hover-to-click functionality to all buttons
+        hoverToClick('water-button');
+        hoverToClick('smile-button');
+        hoverToClick('exercise-button');
+        hoverToClick('self-love-button');
+        hoverToClick('talk-friend-button');
+        hoverToClick('talk-stranger-button');
     </script>
+
   </body>
 </html>
