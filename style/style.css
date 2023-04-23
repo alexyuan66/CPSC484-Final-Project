@@ -1,8 +1,7 @@
-body {
-/*  background-color: #222222;*/
-    font-family: "Open Sans", "Lato", sans-serif;
+html, body {
+  cursor: none;
+  font-family: "Open Sans", "Lato", sans-serif;
 }
-
 
 .action-button {
   display: inline-block;
