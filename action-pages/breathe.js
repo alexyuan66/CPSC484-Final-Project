@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const breathCount = document.querySelector('#breath-counter');
     let size = 100;
     let breaths = 0;
-    const breathsGoal = 10;
+    const breathsGoal = 5;
   
     function breathe() {
       title.textContent = "Inhale";
