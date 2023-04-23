@@ -26,12 +26,13 @@
     </div>
 
     <div class="other-button-container">
-      <button class="other-button" onmouseover="startHoverTimer(this)" onmouseout="clearHoverTimer(this)" onclick="goToMainMenu()">Back</button>
-      <button class="other-button" onmouseover="startHoverTimer(this)" onmouseout="clearHoverTimer(this)" onclick="completeBreathing()">Done (+15%)</button>
+      <button class="other-button" onclick="goToMainMenu()">Back</button>
+      <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
     </div>
 
     <div class="cursor"></div>
 
+    <script src="../updateHealthbar.js"></script>
     <script src="breathe.js"></script>
     <script>
       let hoverTimeout;
