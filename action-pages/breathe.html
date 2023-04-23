@@ -27,7 +27,7 @@
 
     <div class="other-button-container">
       <button class="other-button" onclick="goToMainMenu()">Back</button>
-      <button class="other-button" onclick="completeBreathing()">Done (+15%)</button>
+      <button class="other-button" onclick ="completeBreathing()" id="done-button">Done (+15%)</button>
     </div>
 
     <div class="cursor"></div>
@@ -35,15 +35,12 @@
     <script src="../updateHealthbar.js"></script>
     <script src="breathe.js"></script>
     <script>
-      let hoverTimeout;
-      function startHoverTimer(button) {
-        hoverTimeout = setTimeout(function() {
-          button.click();
-        }, 3000);
-      }
-      function clearHoverTimer(button) {
-        clearTimeout(hoverTimeout);
-      }
+      var doneButton = document.getElementById("done-button");
+      doneButton.addEventListener("mouseenter", function() {
+        setTimeout(function() {
+          doneButton.click();
+        }, 3000); // set timer for 3 seconds
+      });
     </script>
   </body>
 </html>
