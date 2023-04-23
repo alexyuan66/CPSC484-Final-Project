@@ -1,12 +1,9 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
     const circle = document.querySelector('.circle');
     const title = document.querySelector('.title');
-    let size = 300;
-  
-    if (!circle || !title) {
-      console.error('Cannot find required element in the DOM');
-      return;
-    }
+    const breathCount = document.querySelector('#breath-counter');
+    let size = 100;
+    let breaths = 0;
   
     function breathe() {
       title.textContent = "Inhale";
@@ -17,7 +14,7 @@
   
         if (size >= 300) {
           clearInterval(inhaleInterval);
-          setTimeout(exhale, 2000); // wait for 2 seconds before exhaling
+          setTimeout(exhale, 2000);
         }
       }, 10);
     }
@@ -31,7 +28,9 @@
   
         if (size <= 100) {
           clearInterval(exhaleInterval);
-          setTimeout(breathe, 2000); // wait for 2 seconds before inhaling again
+          breaths++;
+          breathCount.textContent = breaths;
+          setTimeout(breathe, 2000);
         }
       }, 10);
     }
@@ -42,14 +41,7 @@
       cursor.style.top = e.clientY + 'px';
     }
   
-    function goToMainMenu() {
-      window.location.href = "../main-menu.html";
-    }
-  
-    function completeBreathing() {
-      window.location.href = "../main-menu.html";
-    }
-  
     document.addEventListener('mousemove', trackCursor);
     breathe();
-  })();
+  });
+  

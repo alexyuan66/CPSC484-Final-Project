@@ -4,6 +4,17 @@
     text-align: center;
     margin-top: 2rem;
 }
+
+/* Add styles for the breath counter */
+.breath-counter {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+  }
+  
 /* Add styles for the pink circle */
 .circle {
     display: inline-block;
