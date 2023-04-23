@@ -16,25 +16,27 @@
         <h1>Great Job Completing the Task!</h1>
         <div class="gif-container">
             <img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 200px;">
+            <div id="speech-bubble"></div>
         </div>
     </div>
 
     <div class="progress-border">
         <div class="progress-bar" id="health-bar"></div>
-      </div>
-      <div class="cursor"></div>
-      <script>
-        function trackCursor(e) {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        }
-        document.addEventListener('mousemove', trackCursor);
+        <div id="total-health"></div>
+    </div>
+    <div class="cursor"></div>
+    <script>
+      function trackCursor(e) {
+          const cursor = document.querySelector('.cursor');
+          cursor.style.left = e.clientX + 'px';
+          cursor.style.top = e.clientY + 'px';
+      }
+      document.addEventListener('mousemove', trackCursor);
 
-        setTimeout(function(){
-          window.location.href = "main-menu.html";
-        }, 4000);
-      </script>
-      <script src="healthbar.js"></script>
+      setTimeout(function(){
+        window.location.href = "startup.html";
+      }, 5000);
+    </script>
+    <script src="healthbar.js"></script>
 </body>
 </html>

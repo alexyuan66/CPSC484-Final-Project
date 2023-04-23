@@ -85,6 +85,7 @@
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
+  margin-top: 50px;
 }
 
 .progress-bar {
@@ -97,9 +98,40 @@
   font-family: courier;
 }
 
-#health-bar {
-  background-color: #00ff00;
+#total-health {
+  text-align: center;
+  font-size: 30px;
+  font-family: courier;
 }
 
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+#speech-bubble {
+  position: absolute;
+  top: 30%;
+  left: calc(100%);
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px #999;
+  max-width: 200px; /* Set the maximum width of the speech bubble */
+  white-space: nowrap; /* Prevent the text from wrapping to a new line */
+}
+
+#speech-bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+  transform: rotate(-45deg) skewX(15deg);
+}
 
 

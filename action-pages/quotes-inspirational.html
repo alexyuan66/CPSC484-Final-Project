@@ -19,10 +19,12 @@
 
         <div class="other-button-container">
             <button class="other-button" onclick="goToMainMenu()">Back</button>
-            <button class="other-button" onclick="generateQuote()">New Quote (+2%)</button>
+            <!-- <button class="other-button" onclick="generateQuote()">New Quote (+2%)</button> -->
+            <button class="other-button" id="heal-button" onclick="goToComplete()">Done (+10%)</button>
         </div>
 
         <div class="cursor"></div>
+        <script src="../updateHealthbar.js"></script>
         <script>
             function trackCursor(e) {
                 const cursor = document.querySelector('.cursor');

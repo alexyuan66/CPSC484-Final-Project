@@ -57,3 +57,7 @@ function generateQuote() {
 function goToMainMenu() {
     window.location.href = "../main-menu.html";
 }
+
+function goToComplete() {
+    window.location.href = "../congratulations.html"
+}
