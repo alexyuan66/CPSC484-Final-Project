@@ -4,6 +4,7 @@
 		<title>Jokes</title>
 	    <link rel="stylesheet" type="text/css" href="../style/style.css">
 	    <script type="text/javascript" src="quotes.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</head>
 
 	<body>
@@ -18,9 +19,8 @@
 		</div>
 
 		<div class="other-button-container">
-			<button class="other-button" onclick="goToMainMenu()">Back</button>
-			<!-- <button class="other-button" onclick="generateJoke()">New Joke (+2%)</button> -->
-			<button class="other-button" id="heal-button" onclick="goToComplete()">Done (+10%)</button>
+			<button class="other-button" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToMainMenu()">Back</button>
+			<button class="other-button" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" id="heal-button" onclick="goToComplete()">Done (+10%)</button>
 		</div>
 
 		<div class="cursor"></div>
@@ -32,6 +32,17 @@
 				cursor.style.top = e.clientY + 'px';
 			}
 			document.addEventListener('mousemove', trackCursor);
+
+            // Click-to-hover functionality
+            let hoverTimer;
+            function startHoverTimer(button) {
+                hoverTimer = setTimeout(() => {
+                    button.click();
+                }, 3000);
+            }
+            function stopHoverTimer() {
+                clearTimeout(hoverTimer);
+            }
 		</script>
 
 	</body>

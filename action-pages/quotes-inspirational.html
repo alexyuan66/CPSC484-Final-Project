@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Inspirational Quotes</title>
-        <link rel="stylesheet" type="text/css" href="../style/style.css">
-        <script type="text/javascript" src="quotes.js"></script>
-    </head>
+	<head>
+		<title>Inspirational Quotes</title>
+		<link rel="stylesheet" type="text/css" href="../style/style.css">
+		<script type="text/javascript" src="quotes.js"></script>
+	</head>
 
-    <body>
+	<body>
 
-        <div class="container">
-            <div class="cat-container-quote">
-                <img src="../media/cat.gif" alt="cat image" width="300" height="300">
-            </div>
-            <div class="quote-container">
-                <p id="quote">Click "New Quote" to display an inspirational quote!</p>
-            </div>
-        </div>
+		<div class="container">
+			<div class="cat-container-quote">
+				<img src="../media/cat.gif" alt="cat image" width="300" height="300">
+			</div>
+			<div class="quote-container">
+				<p id="quote">Click "New Quote" to display an inspirational quote!</p>
+			</div>
+		</div>
 
-        <div class="other-button-container">
-            <button class="other-button" onclick="goToMainMenu()">Back</button>
-            <!-- <button class="other-button" onclick="generateQuote()">New Quote (+2%)</button> -->
-            <button class="other-button" id="heal-button" onclick="goToComplete()">Done (+10%)</button>
-        </div>
+		<div class="other-button-container">
+			<button class="other-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToMainMenu()">Back</button>
+			<!-- <button class="other-button" onclick="generateQuote()">New Quote (+2%)</button> -->
+			<button class="other-button" id="heal-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToComplete()">Done (+10%)</button>
+		</div>
 
-        <div class="cursor"></div>
-        <script src="../updateHealthbar.js"></script>
-        <script>
-            function trackCursor(e) {
-                const cursor = document.querySelector('.cursor');
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            }
-            document.addEventListener('mousemove', trackCursor);
+		<div class="cursor"></div>
+		<script src="../updateHealthbar.js"></script>
+		<script>
+			function trackCursor(e) {
+				const cursor = document.querySelector('.cursor');
+				cursor.style.left = e.clientX + 'px';
+				cursor.style.top = e.clientY + 'px';
+			}
+			document.addEventListener('mousemove', trackCursor);
 
-            const newQuoteButton = document.getElementById('new-quote-button');
-            let timerId;
+			let timerId;
 
-            newQuoteButton.addEventListener('mouseover', function() {
-                timerId = setTimeout(function() {
-                    generateQuote();
-                }, 3000);
-            });
+			function buttonHover(button) {
+				timerId = setTimeout(function() {
+					button.click();
+					clearTimeout(timerId);
+				}, 3000);
+			}
 
-            newQuoteButton.addEventListener('mouseout', function() {
-                clearTimeout(timerId);
-            });
+			function buttonHoverEnd() {
+				clearTimeout(timerId);
+			}
 
-            function goToMainMenu() {
-                window.location.href = "../index.html";
-            }
-        </script>
+			function goToMainMenu() {
+				window.location.href = "../index.html";
+			}
+		</script>
 
-    </body>
+	</body>
 </html>
