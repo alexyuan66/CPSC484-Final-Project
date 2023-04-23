@@ -25,11 +25,12 @@
   margin-left: -75px;
   background-color: paleturquoise;
   color: black;
-  transition: background-color 0.5s;
+  transition: background-color 4s, transform 4s;;
 }
 
 .button:hover {
-  background-color: turquoise;
+  background-color: rgb(25, 184, 168);
+  transform: scale(1.5);
 }
 
 .center {
