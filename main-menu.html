@@ -18,9 +18,9 @@
     </div>
 
     <div class="button" id="joke-button" style="top: 25%; left: 12%;">Hear A Joke!</div>
-    <div class="button" id="breathe-button" style="top: 75%; left: 12%;">Guided Breathing!</div>
-    <div class="button" id="check-in-button" style="top: 25%; left: 88%;">Check in :)</div>
-    <div class="button" id="inspiration-button" style="top: 75%; left: 88%;">Get Inspired!</div>
+    <div class="button" id="breathe-button" style="top: 70%; left: 12%;">Guided Breathing!</div>
+    <div class="button" id="check-in-button" style="top: 25%; left: 80%;">Check in :)</div>
+    <div class="button" id="inspiration-button" style="top: 70%; left: 80%;">Get Inspired!</div>
 
     <div class="gif-container">
     	<img src="media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
@@ -64,6 +64,8 @@
           checkCount = 0
           inspCount = 0
 
+          joke.style["background-color"] = purple;
+
           if (jokeCount == 20) {
             window.location.href = 'action-pages/quotes-jokes.html'
           }
@@ -73,6 +75,8 @@
           breatheCount = breatheCount + 1
           checkCount = 0
           inspCount = 0
+
+          breathe.style["background-color"] = purple;
 
           if (breatheCount == 20) {
             window.location.href = 'action-pages/breathe.html'
@@ -84,6 +88,8 @@
           checkCount = checkCount + 1
           inspCount = 0
 
+          check.style["background-color"] = purple;
+
           if (checkCount == 20) {
             window.location.href = 'action-pages/check-in.html'
           }
@@ -93,6 +99,8 @@
           breatheCount = 0
           checkCount = 0
           inspCount = inspCount + 1
+
+          insp.style["background-color"] = purple;
 
           if (jokeCount == 20) {
             window.location.href = 'action-pages/quotes-inspirational.html'
