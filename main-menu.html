@@ -33,44 +33,78 @@
     </div>
 
     <div class="cursor"></div>
+    <script src="kinect-cursor.js"></script>
     <script>
-        function trackCursor(e) {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
+      let jokeCount = 0
+      let breatheCount = 0
+      let inspCount = 0
+      let checkCount = 0
+      
+      setInterval(function() {
+        
+        const cursor = document.querySelector(".cursor");
+        const cursorPos = cursor.getBoundingClientRect();
+
+        const joke = document.getElementById("joke-button");
+        const jokePos = joke.getBoundingClientRect();
+
+        const breathe = document.getElementById("breathe-button");
+        const breathePos = breathe.getBoundingClientRect();
+
+        const check = document.getElementById("check-in-button");
+        const checkPos = check.getBoundingClientRect();
+
+        const insp = document.getElementById("inspiration-button");
+        const inspPos = insp.getBoundingClientRect();
+
+        if (cursorPos.top < jokePos.bottom && cursorPos.bottom > jokePos.top &&
+        cursorPos.left < jokePos.right && cursorPos.right > jokePos.left) {
+          jokeCount = jokeCount + 1
+          breatheCount = 0
+          checkCount = 0
+          inspCount = 0
+
+          if (jokeCount == 20) {
+            window.location.href = '/Users/annaxu/Desktop/CPSC484-Final-Project/action-pages/quotes-jokes.html'
+          }
+        } else if (cursorPos.top < breathePos.bottom && cursorPos.bottom > breathePos.top &&
+        cursorPos.left < breathePos.right && cursorPos.right > breathePos.left) {
+          jokeCount = 0
+          breatheCount = breathCount + 1
+          checkCount = 0
+          inspCount = 0
+
+          if (breathCount == 20) {
+            window.location.href = '/Users/annaxu/Desktop/CPSC484-Final-Project/action-pages/breathe.html'
+          }
+        } else if (cursorPos.top < checkPos.bottom && cursorPos.bottom > checkPos.top &&
+        cursorPos.left < checkPos.right && cursorPos.right > checkPos.left) {
+          jokeCount = 0
+          breatheCount = 0
+          checkCount = checkCount + 1
+          inspCount = 0
+
+          if (checkCount == 20) {
+            window.location.href = '/Users/annaxu/Desktop/CPSC484-Final-Project/action-pages/check-in.html'
+          }
+        } else if (cursorPos.top < inspPos.bottom && cursorPos.bottom > inspPos.top &&
+        cursorPos.left < inspPos.right && cursorPos.right > inspPos.left) {
+          jokeCount = 0
+          breatheCount = 0
+          checkCount = 0
+          inspCount = inspCount + 1
+
+          if (jokeCount == 20) {
+            window.location.href = '/Users/annaxu/Desktop/CPSC484-Final-Project/action-pages/quotes-inspirational.html'
+          }
+        } else {
+          jokeCount = 0
+          breatheCount = 0
+          checkCount = 0
+          inspCount = 0
         }
-        document.addEventListener('mousemove', trackCursor);
 
-        $('.button').on('mouseenter', function() {
-          var timeout = setTimeout(function() {
-            $(this).click();
-          }.bind(this), 3000);
-          $(this).data('timeout', timeout);
-        });
-
-        $('.button').on('mouseleave', function() {
-          clearTimeout($(this).data('timeout'));
-        });
-
-        $('#joke-button').on('click', function() {
-          redirectToJoke();
-        });
-
-        $('#breathe-button').on('click', function() {
-          redirectToBreathe();
-        });
-
-        $('#check-in-button').on('click', function() {
-          redirectToCheckIn();
-        });
-
-        $('#inspiration-button').on('click', function() {
-          redirectToInspiration();
-        });
-
-        setTimeout(function(){
-          window.location.href = "startup.html";
-        }, 60000);
+      }, 100);
     </script>
     
     <script src="healthbar.js"></script>
