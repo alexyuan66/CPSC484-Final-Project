@@ -142,9 +142,9 @@ const twod = {
 function map_kinect_coords_to_cursor_coords(wrist_pelvis_dist) {
   // Range of webpage coordinates
   const CANVAS_X_MIN = 0
-  const CANVAS_X_MAX = 1225;
+  const CANVAS_X_MAX = 1920;
   const CANVAS_Y_MIN = 0
-  const CANVAS_Y_MAX = 500;
+  const CANVAS_Y_MAX = 1080;
 
   // Range of coordinates that are input
   const KINECT_X_MIN = 25
