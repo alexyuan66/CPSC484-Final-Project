@@ -26,7 +26,7 @@
     </div>
 
     <div class="other-button-container">
-      <button class="other-button" id="back-button" onclick="goToMainMenu()">Back</button>
+      <button class="other-button" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToMainMenu()">Back</button>
     </div>
 
     <div class="cursor"></div>
@@ -34,13 +34,23 @@
     <script src="../updateHealthbar.js"></script>
     <script src="breathe.js"></script>
     <script>
-      var backbutton = document.getElementById("back-button");
+      function trackCursor(e) {
+        const cursor = document.querySelector('.cursor');
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      }
 
-      backbutton.addEventListener("mouseenter", function() {
-        setTimeout(function() {
-          backbutton.click();
-        }, 3000); // set timer for 3 seconds
-      });
+      document.addEventListener('mousemove', trackCursor);
+      // Click-to-hover functionality
+      let hoverTimer;
+      function startHoverTimer(button) {
+          hoverTimer = setTimeout(() => {
+              button.click();
+          }, 3000);
+      }
+      function stopHoverTimer() {
+          clearTimeout(hoverTimer);
+      }
     </script>
   </body>
 </html>
