@@ -33,17 +33,14 @@ function generateJoke() {
 
 function generateQuote() {
     const inspirational_quotes = [
-        "'Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.' -Christian D. Larson",
-        "'The future belongs to those who believe in the beauty of their dreams.' -Eleanor Roosevelt",
-        "'It does not matter how slowly you go as long as you do not stop.' -Confucius",
-        "'Happiness is not something ready made. It comes from your own actions.' -Dalai Lama",
-        "'Strive not to be a success, but rather to be of value.' -Albert Einstein",
+        "'The future belongs to those who believe in the beauty of their dreams.' -Eleanor Roosevelt, American politictan, diplomat, and activist",
+        "'It does not matter how slowly you go as long as you do not stop.' -Confucius, Chinese philosopher",
+        "'Happiness is not something ready made. It comes from your own actions.' -Dalai Lama, spirtual leader",
+        "'Strive not to be a success, but rather to be of value.' -Albert Einstein, physicist",
         "'Believe in yourself, take on your challenges, dig deep within yourself to conquer fears. Never let anyone bring you down. You got this.' -Chantal Sutherland",
-        "'The only person you are destined to become is the person you decide to be.' -Ralph Waldo Emerson",
         "'We may encounter many defeats but we must not be defeated.' -Maya Angelou",
-        "'Your time is limited, don't waste it living someone else's life.' -Steve Jobs",
         "'If you want to lift yourself up, lift up someone else.' -Booker T. Washington",
-        "The future belongs to those who believe in the beauty of their dreams. - Marie Curie, chemist and physicist",
+        "'The future belongs to those who believe in the beauty of their dreams.' - Marie Curie, chemist and physicist",
     ];
     const randomQuote = inspirational_quotes[Math.floor(Math.random() * inspirational_quotes.length)];
     document.getElementById("quote").innerHTML = randomQuote;
