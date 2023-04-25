@@ -42,7 +42,8 @@ TODO
 - Alex Yuan (amy24)
     - TODO
 - Anna Xu (awx2)
-    - TODO
+    - I did a lot of the frontend for this project. I did index.html, part of the main-menu.html, and congratulations.html. Addiitonally, I worked on styling for all the pages. One of the most difficult aspects I worked on was connecting the kinect cursor with the html pages. Before, we were using mouse hovering, which was not compatible with the sensor. Instead I had to use the javascript function getBoundingClientRect() to detect one div on top of another div. In the end, I wrote javascript for all the buttons in the project. I also was the one to upload our project to the sensor and start testing it there. 
+    - It was sometimes difficult coordinating with group because of incompatible scheudles. We were able to work around this by meeting in pairs, triples, and on occation 4 people at a time. We also were in frequent communicaiton over text. 
 - Nathalia Reis (nvr4)
     - TODO
 - Oion Akif (ora3)
