@@ -98,6 +98,15 @@ html, body {
     transform: translateX(-50%);
 }
 
+.cat-container-breathe {
+  flex-basis: 50%;
+  padding: 10px;
+  position: fixed;
+  top: 20%;
+  left: 25%;
+  transform: translateX(-50%);
+}
+
 .quote-container {
     flex-basis: 50%;
     padding: 10px;

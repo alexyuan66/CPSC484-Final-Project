@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const circle = document.querySelector('.circle');
     const title = document.querySelector('.title');
     const breathCount = document.querySelector('#breath-counter');
-    let size = 100;
+    let size = 200;
     let breaths = 0;
     const breathsGoal = 5;
   
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         circle.style.width = size + 'px';
         circle.style.height = size + 'px';
   
-        if (size >= 300) {
+        if (size >= 600) {
           clearInterval(inhaleInterval);
           setTimeout(exhale, 2000);
         }
