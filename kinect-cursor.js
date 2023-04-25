@@ -33,9 +33,7 @@ const frames = {
       const command = frames.get_right_wrist_command(data);
 
       // If the command is valid, update the cursor position
-      if (command !== null) {
-        // let hand_x = command[0];
-        // let hand_y = command[1];
+      if (command != null) {
         let result = map_kinect_coords_to_cursor_coords(command);
         frames.update_cursor(result);
       }
@@ -136,9 +134,9 @@ const twod = {
 function map_kinect_coords_to_cursor_coords(wrist_pelvis_dist) {
   // Range of webpage coordinates
   const CANVAS_X_MIN = 0
-  const CANVAS_X_MAX = 1920;
+  const CANVAS_X_MAX = 1880;
   const CANVAS_Y_MIN = 0
-  const CANVAS_Y_MAX = 1080;
+  const CANVAS_Y_MAX = 1040;
 
   // Range of coordinates that are input
   const KINECT_X_MIN = 25

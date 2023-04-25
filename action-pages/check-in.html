@@ -61,6 +61,16 @@
           water.style["background-color"] = "pink";
 
           if (waterCount == 20) {
+            // Check if the user has a saved health value in local storage
+						let currentHealth = localStorage.getItem("health");
+						// Increase the health value by 10%
+						currentHealth = parseInt(currentHealth);
+						currentHealth += 10;
+						if (currentHealth > 100) {
+							currentHealth = 0;
+						}
+						// Save the new health value to local storage
+						localStorage.setItem("health", currentHealth);
             window.location.href = '../congratulations.html'
           }
         } else if (cursorPos.top < exercisePos.bottom && cursorPos.bottom > exercisePos.top &&
@@ -73,6 +83,16 @@
           exercise.style["background-color"] = "pink";
 
           if (exerCount == 20) {
+            // Check if the user has a saved health value in local storage
+						let currentHealth = localStorage.getItem("health");
+						// Increase the health value by 10%
+						currentHealth = parseInt(currentHealth);
+						currentHealth += 10;
+						if (currentHealth > 100) {
+							currentHealth = 0;
+						}
+						// Save the new health value to local storage
+						localStorage.setItem("health", currentHealth);
             window.location.href = '../congratulations.html'
           }
         } else if (cursorPos.top < selfPos.bottom && cursorPos.bottom > selfPos.top &&
@@ -85,6 +105,16 @@
           self.style["background-color"] = "pink";
 
           if (selfCount == 20) {
+            // Check if the user has a saved health value in local storage
+						let currentHealth = localStorage.getItem("health");
+						// Increase the health value by 10%
+						currentHealth = parseInt(currentHealth);
+						currentHealth += 10;
+						if (currentHealth > 100) {
+							currentHealth = 0;
+						}
+						// Save the new health value to local storage
+						localStorage.setItem("health", currentHealth);
             window.location.href = '../congratulations.html'
           }
         } else if (cursorPos.top < friendPos.bottom && cursorPos.bottom > friendPos.top &&
@@ -97,6 +127,16 @@
           friend.style["background-color"] = "pink";
 
           if (friendCount == 20) {
+            // Check if the user has a saved health value in local storage
+						let currentHealth = localStorage.getItem("health");
+						// Increase the health value by 10%
+						currentHealth = parseInt(currentHealth);
+						currentHealth += 10;
+						if (currentHealth > 100) {
+							currentHealth = 0;
+						}
+						// Save the new health value to local storage
+						localStorage.setItem("health", currentHealth);
             window.location.href = '../congratulations.html'
           }
         } else {

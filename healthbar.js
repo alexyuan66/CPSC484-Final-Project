@@ -10,12 +10,10 @@ function tohex(r, g, b) {
 const healthBar = document.getElementById("health-bar");
 const totalHealth = document.getElementById("total-health");
 const speech = document.getElementById("speech-bubble");
-console.log(speech);
 
 // Check if the user has a saved health value in local storage
 let currentHealth = localStorage.getItem("health");
 if (currentHealth) {
-  console.log(currentHealth);
   if(currentHealth == 100) {
     // If a saved value exists, set the health bar to that value
     healthBar.style.backgroundColor = "#00ff00";
