@@ -89,13 +89,7 @@ const frames = {
       let wrist_x = wrist_right.pixel.x;
       let wrist_y = wrist_right.pixel.y;
 
-      let normalized_x = ((chest_x - wrist_x)/250) * screen.width;
-      let normalized_y = ((chest_y - wrist_y)/125) * screen.height;
-
-
       return {x: chest_x - wrist_x, y: chest_y-wrist_y};
-
-      return [normalized_x, normalized_y];
     }
   },
 
