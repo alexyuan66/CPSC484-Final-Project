@@ -25,7 +25,7 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 ## Dependencies
 
-* Our project relies solely on HTML, CSS, and JavaScript and does not require any additional dependencies to be installed.
+Our project relies solely on HTML, CSS, and JavaScript and does not require any additional dependencies to be installed. It will run on any standard modern web browser.
 
 ## How to Run
 
@@ -56,7 +56,7 @@ To ensure optimal functionality of our prototype, the following constraints shou
 * Anna Xu (awx2)
     * I contributed to the frontend development of the project by creating index.html, part of the main-menu.html, and congratulations.html.
     * My main focus was on styling all the pages, which included the challenging task of connecting the kinect cursor with the HTML pages.
-    * To achieve this, I had to use the javascript function getBoundingClientRect() to detect one div on top of another div, as using mouse hovering was not compatible with the sensor.
+    * To achieve this, I had to use the javascript function `getBoundingClientRect()` to detect one div on top of another div, as using mouse hovering was not compatible with the sensor.
     * I also wrote JavaScript code for all the buttons in the project and uploaded the project to the sensor for testing.
     * Due to incompatible schedules, it was sometimes challenging to coordinate with the group. However, we worked around this by meeting in pairs, triples, and occasionally in groups of four, and kept in frequent communication over text.
 
