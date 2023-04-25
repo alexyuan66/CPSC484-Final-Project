@@ -19,7 +19,7 @@ By providing practical mental health solutions that can be done anywhere, the pl
 4. Users can answer a questionnaire about their health. This questionnaire/checklist is to remind users to do good things for their health such as drinking water, exercising, eating, etc. This will help motivate users to complete their self-care tasks, which interviewees indicated a desire towards.
     - This is achieved by having a section in the tasks option to complete a set of “self-care” tasks, which includes actions such as “Drink Water,” “Exercise,” “Remind Yourself You’re Amazing,” and “Talk to a Friend,” which we hope that the user will see as valuable additions to their routines. The rewarding of points for completing these tasks is also included to incentivize users to complete them regularly.
 5. Participants should be able to receive guided practice on good deep breathing techniques. Many studies have shown how deep breathing can positively influence mental health and reduce stress. Interviewees also indicated an interest in practical mental health solutions that can be done anywhere, which deep breathing accommodates.
-    - This is achieved by having a “controlled breathing” action that the user can perform which provides points to the user. This allows the user to practice and master this important skill while also providing an incentive to continue, perhaps multiple times. We also provide visual and auditory cues to guide the user through the deep breathing exercise to ensure they are following proper technique. The presence of the mascot and provides positive reinforcement during the exercise, making it a more enjoyable and effective experience for the user.
+    - This is achieved by having a “controlled breathing” action that the user can perform which provides points to the user. This allows the user to practice and master this important skill while also providing an incentive to continue, perhaps multiple times. We also provide visual and auditory cues to guide the user through the deep breathing exercise to ensure they are following proper technique. The presence of the mascot provides positive reinforcement during the exercise, making it a more enjoyable and effective experience for the user.
 
 # Usage
 
@@ -33,7 +33,7 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 ## Constraints from the Deployable Environment
 
-- Our prototype is built on the basis of TV 4 in Hillhouse. It may not work as intended on our TV systems.
+- Our prototype is built on the basis of TV 4 in Hillhouse. It may not work as intended on other TV systems.
 - Our prototype only utilizes the right wrist as form of sensor input, as well as the chest as a form of normalization. No other body part works on our prototype.
 - A user cannot stand too far from the display, or else it will not work as intended. Namely, users will not be able to reach one side of the screen to another side by moving their right arm.
 - A user cannot stand too close to the display, or else it will not work as intended. Namely, the cursor utilized within our display may be too sensitive, going all over the place and not working as intended.
