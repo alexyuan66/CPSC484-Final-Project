@@ -43,8 +43,17 @@ TODO
     - TODO
 - Anna Xu (awx2)
     - TODO
+    
 - Nathalia Reis (nvr4)
-    - TODO
+    - Throughout the week our team met up multiple times in person and online to develop the prototype. 
+    - I created the breathe.html, css, and js files and worked on getting the animated breathing circle working. 
+    - I collaborated with my team to do a lot of front end development such as css styling and html coding on main-menu, breathing, quotes, and jokes. 
+    - I worked with my team to adapt the code to work with the kinect sensor including adding functionality to the buttons so that hovering over them in order to select, instead of clicking. 
+    - I worked on linking buttons to appropriate pages. 
+    - I worked on making the buttons grow and change color when you hover over them in order to give users visual feedback of what their hands were doing. 
+    - I assisted in creating the README file with Alex and Oion. 
+    - As a team, we worked on testing and debugging throughout the process, and I’m very grateful to my team for helping me to figure out issues along the way. 
+
 - Oion Akif (ora3)
     - I helped write up the README for the document, specifically the Project section including a description and tasks.
     - I created the framework for the website frontend which the rest of the code was based on, and continued to make tweaks throughout to mature it.
