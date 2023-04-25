@@ -33,24 +33,33 @@
 
     <script src="../updateHealthbar.js"></script>
     <script src="breathe.js"></script>
+    <script src="../kinect-cursor.js"></script>
     <script>
-      function trackCursor(e) {
-        const cursor = document.querySelector('.cursor');
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-      }
+      let count = 0
+      
+      setInterval(function() {
+        
+        const cursor = document.querySelector(".cursor");
+        const cursorPos = cursor.getBoundingClientRect();
 
-      document.addEventListener('mousemove', trackCursor);
-      // Click-to-hover functionality
-      let hoverTimer;
-      function startHoverTimer(button) {
-          hoverTimer = setTimeout(() => {
-              button.click();
-          }, 3000);
-      }
-      function stopHoverTimer() {
-          clearTimeout(hoverTimer);
-      }
-    </script>
+        const circle = document.querySelector(".other-button");
+        const circlePos = circle.getBoundingClientRect();
+
+        if (cursorPos.top < circlePos.bottom && cursorPos.bottom > circlePos.top &&
+        cursorPos.left < circlePos.right && cursorPos.right > circlePos.left) {
+          count = count + 1
+          circle.style["background-color"] = "pink"
+
+          if (count == 20) {
+            window.location.href = '../main-menu.html'
+          }
+        } else {
+          count = 0
+          circle.style["background-color"] = "paleturquoise"
+        }
+
+      }, 100);
+
+  </script>
   </body>
 </html>
