@@ -21,8 +21,8 @@
 		</div>
 
 		<div class="other-button-container">
-			<button class="other-button" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToMainMenu()">Back</button>
-			<button class="other-button" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" id="heal-button" onclick="goToComplete()">Done</button>
+			<button class="other-button back" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToMainMenu()">Back</button>
+			<button class="other-button done" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" id="heal-button" onclick="goToComplete()">Done</button>
 		</div>
 
 		<div class="cursor"></div>
@@ -35,16 +35,60 @@
 			}
 			document.addEventListener('mousemove', trackCursor);
 
-            // Click-to-hover functionality
-            let hoverTimer;
-            function startHoverTimer(button) {
-                hoverTimer = setTimeout(() => {
-                    button.click();
-                }, 3000);
-            }
-            function stopHoverTimer() {
-                clearTimeout(hoverTimer);
-            }
+			let backCount = 0
+			let doneCount = 0
+        
+			setInterval(function() {
+			
+				const cursor = document.querySelector(".cursor");
+				const cursorPos = cursor.getBoundingClientRect();
+
+				const back = document.querySelector(".back");
+				const backPos = back.getBoundingClientRect();
+
+				const done = document.querySelector(".done");
+				const donePos = back.getBoundingClientRect();
+
+				if (cursorPos.top < backPos.bottom && cursorPos.bottom > backPos.top &&
+				cursorPos.left < backPos.right && cursorPos.right > backPos.left) {
+					backCount = backCount + 1
+					doneCount = 0
+
+					back.style["background-color"] = "pink"
+
+					if (backCount == 20) {
+					window.location.href = '../main-menu.html'
+					}
+				} else if (cursorPos.top < donePos.bottom && cursorPos.bottom > donePos.top &&
+				cursorPos.left < donePos.right && cursorPos.right > donePos.left) {
+					backCount = 0
+					doneCount = doneCount + 1
+
+					done.style["background-color"] = "pink"
+
+					if (doneCount == 20) {
+					window.location.href = '../congratulations.html'
+					}
+				
+				} else {
+					backCount = 0
+					doneCount = 0
+					back.style["background-color"] = "paleturquoise"
+					done.style["background-color"] = "paleturquoise"
+				}
+
+			}, 100);
+
+            // // Click-to-hover functionality
+            // let hoverTimer;
+            // function startHoverTimer(button) {
+            //     hoverTimer = setTimeout(() => {
+            //         button.click();
+            //     }, 3000);
+            // }
+            // function stopHoverTimer() {
+            //     clearTimeout(hoverTimer);
+            // }
 		</script>
 
 	</body>
