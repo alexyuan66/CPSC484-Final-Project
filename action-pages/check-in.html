@@ -16,27 +16,102 @@
       <p>Hover and hold your hand over any button for 3 seconds to select</p>
     </div>
 
-    <div class="button" id="water-button" id="heal-button" style="top: 15%; left: 12%;">Drink Water!</div>
-    <div class="button" id="smile-button" id="heal-button" style="top: 50%; left: 12%;">Smile</div>
-    <div class="button" id="exercise-button" id="heal-button" style="top: 85%; left: 12%;">Exercise</div>
+    <div class="button" id="water-button" style="top: 25%; left: 12%;">Drink Water!</div>
+    <div class="button" id="exercise-button" style="top: 65%; left: 12%;">Exercise</div>
 
-    <div class="button" id="self-love-button" id="heal-button" style="top: 15%; left: 88%;">Remind Youself You're Amazing</div>
-    <div class="button" id="talk-friend-button" id="heal-button" style="top: 50%; left: 88%;">Talk to a Friend</div>
-    <div class="button" id="talk-stranger-button" id="heal-button" style="top: 85%; left: 88%;">Talk to a Stranger</div>
+    <div class="button" id="self-love-button" style="top: 25%; left: 80%;">Remind Youself You're Amazing</div>
+    <div class="button" id="talk-friend-button" style="top: 65%; left: 80%;">Talk to a Friend</div>
 
     <div class="cat-container">
     	<img src="../media/cat.gif" alt="Animated GIF" style="display: block; margin: 0 auto; height: 300px;">
     </div>
 
     <div class="cursor"></div>
+    <script src="../kinect-cursor.js"></script>
     <script>
-        function trackCursor(e) {
-            const cursor = document.querySelector('.cursor');
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        }
-        document.addEventListener('mousemove', trackCursor);
+      let waterCount = 0
+      let exerCount = 0
+      let selfCount = 0
+      let friendCount = 0
+      
+      setInterval(function() {
+        
+        const cursor = document.querySelector(".cursor");
+        const cursorPos = cursor.getBoundingClientRect();
 
+        const water = document.getElementById("water-button");
+        const waterPos = water.getBoundingClientRect();
+
+        const exercise = document.getElementById("exercise-button");
+        const exercisePos = exercise.getBoundingClientRect();
+
+        const self = document.getElementById("self-love-button");
+        const selfPos = self.getBoundingClientRect();
+
+        const friend = document.getElementById("talk-friend-button");
+        const friendPos = friend.getBoundingClientRect();
+
+        if (cursorPos.top < waterPos.bottom && cursorPos.bottom > waterPos.top &&
+        cursorPos.left < waterPos.right && cursorPos.right > waterPos.left) {
+          waterCount = waterCount + 1
+          exerCount = 0
+          selfCount = 0
+          friendCount = 0
+
+          water.style["background-color"] = "pink";
+
+          if (waterCount == 20) {
+            window.location.href = '../congratulations.html'
+          }
+        } else if (cursorPos.top < exercisePos.bottom && cursorPos.bottom > exercisePos.top &&
+        cursorPos.left < exercisePos.right && cursorPos.right > exercisePos.left) {
+          waterCount = 0
+          exerCount = exerCount + 1
+          selfCount = 0
+          friendCount = 0
+
+          exercise.style["background-color"] = "pink";
+
+          if (exerCount == 20) {
+            window.location.href = '../congratulations.html'
+          }
+        } else if (cursorPos.top < selfPos.bottom && cursorPos.bottom > selfPos.top &&
+        cursorPos.left < selfPos.right && cursorPos.right > selfPos.left) {
+          waterCount = 0
+          exerCount = 0
+          selfCount = selfCount + 1
+          friendCount = 0
+
+          self.style["background-color"] = "pink";
+
+          if (selfCount == 20) {
+            window.location.href = '../congratulations.html'
+          }
+        } else if (cursorPos.top < friendPos.bottom && cursorPos.bottom > friendPos.top &&
+        cursorPos.left < friendPos.right && cursorPos.right > friendPos.left) {
+          waterCount = 0
+          exerCount = 0
+          selfCount = 0
+          friendCount = friendCount + 1
+
+          friend.style["background-color"] = "pink";
+
+          if (friendCount == 20) {
+            window.location.href = '../congratulations.html'
+          }
+        } else {
+          waterCount = 0
+          exerCount = 0
+          selfCount = 0
+          friendCount = 0
+
+          water.style["background-color"] = "paleturquoise";
+          exercise.style["background-color"] = "paleturquoise";
+          self.style["background-color"] = "paleturquoise";
+          friend.style["background-color"] = "paleturquoise";
+        }
+
+      }, 100);
     </script>
 
   </body>
