@@ -27,7 +27,7 @@
 
 		<div class="cursor"></div>
 		<script src="../updateHealthbar.js"></script>
-		<script src="kinect-cursor.js"></script>
+		<script src="../kinect-cursor.js"></script>
 		<script>
 			function trackCursor(e) {
 				const cursor = document.querySelector('.cursor');
@@ -48,7 +48,7 @@
 				const backPos = back.getBoundingClientRect();
 
 				const done = document.querySelector(".done");
-				const donePos = back.getBoundingClientRect();
+				const donePos = done.getBoundingClientRect();
 
 				if (cursorPos.top < backPos.bottom && cursorPos.bottom > backPos.top &&
 				cursorPos.left < backPos.right && cursorPos.right > backPos.left) {
@@ -80,16 +80,6 @@
 
 			}, 100);
 
-            // // Click-to-hover functionality
-            // let hoverTimer;
-            // function startHoverTimer(button) {
-            //     hoverTimer = setTimeout(() => {
-            //         button.click();
-            //     }, 3000);
-            // }
-            // function stopHoverTimer() {
-            //     clearTimeout(hoverTimer);
-            // }
 		</script>
 
 	</body>

@@ -20,12 +20,13 @@
 		</div>
 
 		<div class="other-button-container">
-			<button class="other-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToMainMenu()">Back</button>
-			<button class="other-button" id="heal-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToComplete()">Done</button>
+			<button class="other-button back" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToMainMenu()">Back</button>
+			<button class="other-button done" id="heal-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToComplete()">Done</button>
 		</div>
-
 		<div class="cursor"></div>
+
 		<script src="../updateHealthbar.js"></script>
+		<script src="../kinect-cursor.js"></script>
 		<script>
 			function trackCursor(e) {
 				const cursor = document.querySelector('.cursor');
@@ -34,22 +35,49 @@
 			}
 			document.addEventListener('mousemove', trackCursor);
 
-			let timerId;
+			let backCount = 0
+			let doneCount = 0
+        
+			setInterval(function() {
+			
+				const cursor = document.querySelector(".cursor");
+				const cursorPos = cursor.getBoundingClientRect();
 
-			function buttonHover(button) {
-				timerId = setTimeout(function() {
-					button.click();
-					clearTimeout(timerId);
-				}, 3000);
-			}
+				const back = document.querySelector(".back");
+				const backPos = back.getBoundingClientRect();
 
-			function buttonHoverEnd() {
-				clearTimeout(timerId);
-			}
+				const done = document.querySelector(".done");
+				const donePos = done.getBoundingClientRect();
 
-			function goToMainMenu() {
-				window.location.href = "../main-menu.html";
-			}
+				if (cursorPos.top < backPos.bottom && cursorPos.bottom > backPos.top &&
+				cursorPos.left < backPos.right && cursorPos.right > backPos.left) {
+					backCount = backCount + 1
+					doneCount = 0
+
+					back.style["background-color"] = "pink"
+
+					if (backCount == 20) {
+					window.location.href = '../main-menu.html'
+					}
+				} else if (cursorPos.top < donePos.bottom && cursorPos.bottom > donePos.top &&
+				cursorPos.left < donePos.right && cursorPos.right > donePos.left) {
+					backCount = 0
+					doneCount = doneCount + 1
+
+					done.style["background-color"] = "pink"
+
+					if (doneCount == 20) {
+					window.location.href = '../congratulations.html'
+					}
+				
+				} else {
+					backCount = 0
+					doneCount = 0
+					back.style["background-color"] = "paleturquoise"
+					done.style["background-color"] = "paleturquoise"
+				}
+
+			}, 100);
 		</script>
 
 	</body>
