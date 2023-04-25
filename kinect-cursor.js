@@ -64,7 +64,7 @@ const frames = {
       }
     }
 
-    // console.log(`num_people=${numPeople}\tbodies=${bodyIds}\tcurrent_body=${active_body_id}\tindex=${active_body_id_index}`);
+    console.log(`num_people=${numPeople}\tbodies=${bodyIds}\tcurrent_body=${active_body_id}\tindex=${active_body_id_index}`);
 
 
     // Initialize the command to null

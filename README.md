@@ -1,10 +1,10 @@
-# Project
+# CPSC 484 Project - Cats4Wellness
 
 ## Description
 
 Our project aims to create a self-care platform that promotes mental well-being. This is achieved by encouraging users to engage in healthy habits and stress-reducing activities.
 
-To incentivize users, the platform includes a cute mascot, a health bar/point system. Users complete tasks, such as breathing exercises, listening to jokes/inspirational quotes, and completing a self-care checklist. Each time one of these actions is completed, health points are added to the mascot, which can be seen on the health bar under the mascot.
+To incentivize users, the platform includes a cute mascot, a health bar/point system. Users complete tasks, such as breathing exercises, reading to jokes/inspirational quotes, and completing a self-care checklist. Each time one of these actions is completed, health points are added to the mascot, which can be seen on the health bar under the mascot.
 
 By providing practical mental health solutions that can be done anywhere, the platform aims to produce healthy habits and improve the mental well-being of its users.
 
@@ -23,24 +23,27 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 # Usage
 
-TODO
+## Dependencies
 
-## Physical Constraints
+- No dependencies need to be installed
 
-- the text file should explain any physical constraints that are important to consider when the course staff evaluates the system prototype. For instance, would users need to be able to stand at least a minimum distance away from the Kinect for the application to run as intended?
-- "constraints from the deployment environment" refers to constraints in the physical environment that are relevant for your system prototype. For example, your prototype is probably built for a given physical location (given by your specific display). Similarly, your prorotype may depend on specific sensing capabilities (e.g., kinect skeleton tracking, group detection, etc.). Documenting all these constraints is useful in case you ever want to run your project on a different environment.
+## How to Run
 
-# Installation
+- Open ./index.html on a web browser
 
-- how to install any dependencies and run the project (2 pts). "how to install any dependencies" refers to code dependencies (e.g., if you have python dependencies)
-- indicates explicitly if there are any constraints from the deployment environment (0.5 pts)
+## Constraints from the Deployable Environment
 
-TODO
+- Our prototype is built on the basis of TV 4 in Hillhouse. It may not work as intended on our TV systems.
+- Our prototype only utilizes the right wrist as form of sensor input, as well as the chest as a form of normalization. No other body part works on our prototype.
+- A user cannot stand too far from the display, or else it will not work as intended. Namely, users will not be able to reach one side of the screen to another side by moving their right arm.
+- A user cannot stand too close to the display, or else it will not work as intended. Namely, the cursor utilized within our display may be too sensitive, going all over the place and not working as intended.
+- A user should stand at a comfortable distance from the display so that they are able to reach all areas of the display (with the cursor) with their right arm and with no physical discomfort.
 
 # Collaboration Record
 
 - Alex Yuan (amy24)
-    - TODO
+    - I began the prototype development by organizing group work sessions as well as coordinated what each person was working on. 
+    - My group began by first working on the front-end of our code. In specific, I assisted in developing the main-menu and congratulation pages as well as design them. One feature that was particularly buggy on these pages 
 - Anna Xu (awx2)
     - I did a lot of the frontend for this project. I did index.html, part of the main-menu.html, and congratulations.html. Addiitonally, I worked on styling for all the pages. One of the most difficult aspects I worked on was connecting the kinect cursor with the html pages. Before, we were using mouse hovering, which was not compatible with the sensor. Instead I had to use the javascript function getBoundingClientRect() to detect one div on top of another div. In the end, I wrote javascript for all the buttons in the project. I also was the one to upload our project to the sensor and start testing it there. 
     - It was sometimes difficult coordinating with group because of incompatible scheudles. We were able to work around this by meeting in pairs, triples, and on occation 4 people at a time. We also were in frequent communicaiton over text. 
