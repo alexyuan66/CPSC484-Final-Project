@@ -43,10 +43,16 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 - Alex Yuan (amy24)
     - I began the prototype development by organizing group work sessions as well as coordinated what each person was working on. 
-    - My group began by first working on the front-end of our code. In specific, I assisted in developing the main-menu and congratulation pages as well as design them. One feature that was particularly buggy on these pages 
+    - My group began by first working on the front-end of our code. In specific, I assisted in developing the main-menu and congratulation pages as well as design them with their respective HTML, CSS, and JS files. One feature that was particularly buggy on these pages was the healthbar, where the value of the healthbar had to be saved between pages. I designed and implemented the health bar functionality as well as added css, fulfilling a task for our game. This involved creating the healthbar.js and updateHealthbar.js files.
+    - Next, I implemented the cursor/sensor functionality within kinect-cursor.js. This was extremly difficult but Oion and I met up numeous times, attened office hours, managed to figure it out, debug, and test the cursor. This took a significant amount of time as I had no prior knowledge of the kinect sensor.
+    - Once finishing the cursor, I then added this baseline cursor functionality within our front-end implementation and continued to work on the design and style of our platform. 
+    - Unfortunately, after we finished the style of our platform, we added to the TV, realizing that much of the CSS of our code had to be adjusted. I adjusted the code to fit the TV,debugged based on the TV functionality, and added adjustments to the cursor functionality.
+    - Finally, I created the Usage section of this readme, wrote my contributions, and further debugged the code.
+
 - Anna Xu (awx2)
     - I did a lot of the frontend for this project. I did index.html, part of the main-menu.html, and congratulations.html. Addiitonally, I worked on styling for all the pages. One of the most difficult aspects I worked on was connecting the kinect cursor with the html pages. Before, we were using mouse hovering, which was not compatible with the sensor. Instead I had to use the javascript function getBoundingClientRect() to detect one div on top of another div. In the end, I wrote javascript for all the buttons in the project. I also was the one to upload our project to the sensor and start testing it there. 
     - It was sometimes difficult coordinating with group because of incompatible scheudles. We were able to work around this by meeting in pairs, triples, and on occation 4 people at a time. We also were in frequent communicaiton over text. 
+
 - Nathalia Reis (nvr4)
     - Throughout the week our team met up multiple times in person and online to develop the prototype. 
     - I created the breathe.html, css, and js files and worked on getting the animated breathing circle working. 
@@ -59,5 +65,7 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 - Oion Akif (ora3)
     - I helped write up the README for the document, specifically the Project section including a description and tasks.
-    - I created the framework for the website frontend which the rest of the code was based on, and continued to make tweaks throughout to mature it.
-    - I helped with the implementation of the cursor logic on the backend to make it controllable via the Kinect sensor.
+    - I created the framework for the website frontend which the rest of the code was based on, and continued to make tweaks throughout our project to help in the development of it. Namely, this involved creating the skeleton code for our front-end in main-menu.html, breathe.html, check-in.html, quotes-inspirational.html, quotes-jokes.html and quotes.js. I also added css within this code, stylizing the pages to fulfill the layout we had proposed in the figma prototype. I also added some of the front-end JS functionality within these pages, which involved getting the buttons to load on 3 seconds of contact.
+    - I helped with the implementation of the cursor logic on the backend to make it controllable via the Kinect sensor. This was an extremly difficult task, but Alex and I met on a daily basis, attended office hours, and got it done. I then added this cursor functionality with Alex to our front-end code.
+    - In addition to creating these pages and functionalities, I also assisted in the debugging of the code and helped test it with my groupmates.
+    - I helped organize and coordinate group work sessions. We followed the schedule we had put out.
