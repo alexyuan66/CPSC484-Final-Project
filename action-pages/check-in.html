@@ -37,45 +37,6 @@
         }
         document.addEventListener('mousemove', trackCursor);
 
-        function redirectToCongrats() {
-          // Check if the user has a saved health value in local storage
-          let currentHealth = localStorage.getItem("health");
-          // Increase the health value by 10%
-          currentHealth = parseInt(currentHealth);
-          currentHealth += 10;
-          if (currentHealth > 100) {
-            currentHealth = 0;
-          }
-          // Save the new health value to local storage
-          localStorage.setItem("health", currentHealth);
-          window.location.href = "../congratulations.html";
-        }
-
-        // function to simulate a button click after 3 seconds of hovering
-        function hoverToClick(buttonId) {
-            const button = document.getElementById(buttonId);
-            let hoverTimer;
-
-            // start timer when the user hovers over the button
-            button.addEventListener('mouseover', function() {
-                hoverTimer = setTimeout(function() {
-                    redirectToCongrats();
-                }, 3000);
-            });
-
-            // reset the timer if the user stops hovering over the button
-            button.addEventListener('mouseout', function() {
-                clearTimeout(hoverTimer);
-            });
-        }
-
-        // add hover-to-click functionality to all buttons
-        hoverToClick('water-button');
-        hoverToClick('smile-button');
-        hoverToClick('exercise-button');
-        hoverToClick('self-love-button');
-        hoverToClick('talk-friend-button');
-        hoverToClick('talk-stranger-button');
     </script>
 
   </body>

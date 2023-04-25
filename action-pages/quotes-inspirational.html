@@ -4,6 +4,7 @@
 		<title>Inspirational Quotes</title>
 		<link rel="stylesheet" type="text/css" href="../style/style.css">
 		<script type="text/javascript" src="quotes.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script>
 			window.addEventListener('DOMContentLoaded', function() {
 				generateQuote();
@@ -23,8 +24,8 @@
 			<button class="other-button back" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToMainMenu()">Back</button>
 			<button class="other-button done" id="heal-button" onmouseover="buttonHover(this)" onmouseout="buttonHoverEnd(this)" onclick="goToComplete()">Done</button>
 		</div>
-		<div class="cursor"></div>
 
+		<div class="cursor"></div>
 		<script src="../updateHealthbar.js"></script>
 		<script src="../kinect-cursor.js"></script>
 		<script>
