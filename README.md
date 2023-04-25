@@ -42,6 +42,7 @@ To ensure optimal functionality of our prototype, the following constraints shou
 * The user should not stand too far from the display, as they will not be able to reach one side of the screen to the other by moving their right arm. This is due to a lower sensitivity the further the user is from the screen. (Note: We chose not to normalize user proximity from the display as a larger distance results in noisier readings)
 * Likewise, the user should not stand too close to the display, as the cursor may be *too* sensitive and be difficult to control.
 * The user should stand at a comfortable distance from the display, allowing them to reach all areas of the screen with their right arm without physical discomfort.
+* In most scenarios, the prototype sets the first person on the display as the user, however, this is not the case in all scenarios. Have 1 person on screen for the best experience.
 
 # Collaboration Record
 
