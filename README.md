@@ -43,7 +43,6 @@ TODO
     - TODO
 - Anna Xu (awx2)
     - TODO
-    
 - Nathalia Reis (nvr4)
     - Throughout the week our team met up multiple times in person and online to develop the prototype. 
     - I created the breathe.html, css, and js files and worked on getting the animated breathing circle working. 
