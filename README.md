@@ -25,12 +25,12 @@ By providing practical mental health solutions that can be done anywhere, the pl
 
 ## Dependencies
 
-- No dependencies need to be installed, we simply used HTML, CSS, and JavaScript.
+- No dependencies need to be installed, we used HTML, CSS, and JavaScript.
 
 ## How to Run
 
-- To run locally, open ./index.html on a web browser
-- To display on Kinect TV, go to http://cpsc484-04.yale.internal:8888/remote and follow the direction on the lefthand column and select "Cats4Wellness"
+- To run locally: open ./index.html on a web browser
+- To display on Kinect TV: go to http://cpsc484-04.yale.internal:8888/remote and follow the directions on the lefthand column and select "Cats4Wellness"
 
 ## Constraints from the Deployable Environment
 
