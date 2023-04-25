@@ -22,12 +22,11 @@
 
 		<div class="other-button-container">
 			<button class="other-button back" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToMainMenu()">Back</button>
-			<button class="other-button done" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" id="heal-button" onclick="goToComplete()">Done</button>
+			<button class="other-button done" onmouseenter="startHoverTimer(this)" onmouseleave="stopHoverTimer(this)" onclick="goToComplete()">Done</button>
 		</div>
 
 		<div class="cursor"></div>
-		<script src="../updateHealthbar.js"></script>
-		<script src="../kinect-cursor.js"></script>
+		<script src="kinect-cursor.js"></script>
 		<script>
 			function trackCursor(e) {
 				const cursor = document.querySelector('.cursor');
@@ -68,7 +67,17 @@
 					done.style["background-color"] = "pink"
 
 					if (doneCount == 20) {
-					window.location.href = '../congratulations.html'
+						// Check if the user has a saved health value in local storage
+						let currentHealth = localStorage.getItem("health");
+						// Increase the health value by 10%
+						currentHealth = parseInt(currentHealth);
+						currentHealth += 10;
+						if (currentHealth > 100) {
+							currentHealth = 0;
+						}
+						// Save the new health value to local storage
+						localStorage.setItem("health", currentHealth);
+						window.location.href = '../congratulations.html'
 					}
 				
 				} else {
