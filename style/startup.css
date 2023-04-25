@@ -8,8 +8,8 @@
 }
 
 #cat-gif {
-    margin: 20px;
-    height: 250px;
+    margin-left: 90px;
+    height: 450px;
 }
 
 #startup-text {
@@ -17,14 +17,15 @@
 }
 
 .expand-button {
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
     background-color: pink;
     border: none;
     border-radius: 50%;
     transition: all 3s ease;
     font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
 }
   
